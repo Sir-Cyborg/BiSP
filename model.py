@@ -59,7 +59,7 @@ class ModelV0(nn.Module):
         )
 
         self.classifier = nn.Sequential(
-            nn.Linear(in_features=hidden_units, 
+            nn.Linear(in_features=hidden_units * 55, 
                       out_features=output_shape),
             nn.Softmax()
         )
