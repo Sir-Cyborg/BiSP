@@ -21,7 +21,7 @@ with torch.inference_mode():
     test_pred_logit = model(signal_test) # logit
     test_pred = torch.softmax(test_pred_logit, dim=1).argmax(dim=1) # go from logits -> prediction probabilities -> prediction labels
     mapped=map.map_positions_to_ids_in_order(test_pred, id_test)
-    plot.show_signal(signal=signal_test, id=id_test, pred=mapped)
+    plot.show_signals(signal=signal_test, id=id_test, pred=mapped)
     print("##################################################################\n")
     print(test_pred)
     print("\n##################################################################\n\n") 
